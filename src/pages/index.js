@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-
+import Layout from '../components/layout'
+import { Badge, ListItem, UnorderedList } from '@chakra-ui/react'
 export const query = graphql`
   query MyQuery {
     allContentfulCity {
       edges {
         node {
           name
-          describer
+          description
           location {
             lat
             lon
@@ -20,20 +21,17 @@ export const query = graphql`
 `
 export default function Home({ data }) {
   return (
-    <div>
-      <h1>
-        Home page
-      </h1>
-      <ul>
+    <Layout>
+      <UnorderedList>
         {
           data.allContentfulCity.edges.map(({ node: city }) => (
-            <li key={city.name}>
-              <Link to={city.gatsbyPath}>{city.name}</Link>
-              {city.describer} - {city.location.lat} - {city.location.lon}
-            </li>
+            <ListItem key={city.name}>
+              <Link to={city.gatsbyPath}> <Badge>{city.name}</Badge> - </Link>
+              {city.description} - {city.location.lat} - {city.location.lon}
+            </ListItem>
           ))
         }
-      </ul>
-    </div>
+      </UnorderedList>
+    </Layout>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import Layout from '../../components/layout'
+import { Heading, Text } from '@chakra-ui/react'
 
 export const query = graphql`
     query ($id: String = "") {
@@ -11,22 +12,24 @@ export const query = graphql`
             lon
         }
         id
-        describer
+        description
         }
     }
 `
 
 export default function City({ data }) {
     return (
-        <div>
-            <h1> Hi I am {data.contentfulCity.name}</h1>
-            <h2>
-                {data.contentfulCity.describer}
-            </h2>
-            <h3>
+        <Layout>
+            <Heading size="md" my="2">
+                Hi I am {data.contentfulCity.name}
+            </Heading>
+            <Text mb="3">
+                {data.contentfulCity.description}
+            </Text>
+            <Text mb="3">
                 {data.contentfulCity.location.lat} - {data.contentfulCity.location.lon}
-            </h3>
-        </div>
+            </Text>
+        </Layout>
     )
 }
 
