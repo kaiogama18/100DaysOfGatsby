@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "challenge-gatsby",
@@ -6,8 +10,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "q5rrN52Kj4_R5naVgsJpRD4Sgozmed15a8C85-v-BLw",
-        spaceId: "tfp4c795fmrh",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-sharp",
