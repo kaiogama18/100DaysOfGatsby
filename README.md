@@ -26,3 +26,5 @@
 ### 🚀 resources
   
   - Contentful Api
+
+## 🚀 Challenge 2: Proof of Concept
