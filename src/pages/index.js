@@ -23,19 +23,20 @@ export const query = graphql`
 export default function Home({ data }) {
   return (
     <>
-    <SEO/>
-    <Layout>
-      <UnorderedList>
-        {
-          data.allContentfulCity.edges.map(({ node: city }) => (
-            <ListItem key={city.name}>
-              <Link to={city.gatsbyPath}> <Badge>{city.name}</Badge> - </Link>
-              {city.description} - {city.location.lat} - {city.location.lon}
-            </ListItem>
-          ))
-        }
-      </UnorderedList>
-    </Layout>
+      <SEO />
+      <Layout>
+
+          <UnorderedList>
+            {
+              data.allContentfulCity.edges.map(({ node: city }) => (
+                <ListItem key={city.name}>
+                  <Link to={city.gatsbyPath}> <Badge>{city.name}</Badge> - </Link>
+                  {city.description} - {city.location.lat} - {city.location.lon}
+                </ListItem>
+              ))
+            }
+          </UnorderedList>
+      </Layout>
     </>
   )
 }
