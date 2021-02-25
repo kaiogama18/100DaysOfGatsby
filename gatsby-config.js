@@ -1,9 +1,8 @@
-const siteMetadata = require('./config/metadata')
+const siteMetadata = require("./config/metadata");
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
-
+});
 
 module.exports = {
   siteMetadata,
@@ -44,7 +43,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#525659`,
         display: `standalone`,
-        icon: 'src/images/icon.png' //512x512
+        icon: "src/images/icon.png", //512x512
       },
       icon_options: {
         purpose: `any maskable`,
