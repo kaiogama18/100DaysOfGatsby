@@ -1,50 +1,47 @@
 import {
-  Button as ChakraButton,
   FormControl,
   FormHelperText,
   FormLabel,
-  Input,
-  Textarea as ChakraTextarea
+  Input
 } from "@chakra-ui/react";
-import { defaultComponents } from "@formium/react";
-import { graphql } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
 
-function TextInput(props) {
-  const { id, label, description, ...rest } = props;
-  return (
-    <FormControl id={id}>
-      <FormLabel>{label} </FormLabel>
-      <Input placeholder={label} {...rest} />
-      <FormHelperText>{description}</FormHelperText>
-    </FormControl>
-  );
-}
+// function TextInput(props) {
+//   const { id, label, description, ...rest } = props;
+//   return (
+//     <FormControl id={id}>
+//       <FormLabel>{label} </FormLabel>
+//       <Input placeholder={label} {...rest} />
+//       <FormHelperText>{description}</FormHelperText>
+//     </FormControl>
+//   );
+// }
 
-function TextArea(props) {
-  const { id, label, description, ...rest } = props;
-  return (
-    <FormControl id={id}>
-      <FormLabel>{label} </FormLabel>
-      <ChakraTextarea {...rest} />
-      <FormHelperText>{description}</FormHelperText>
-    </FormControl>
-  );
-}
+// function TextArea(props) {
+//   const { id, label, description, ...rest } = props;
+//   return (
+//     <FormControl id={id}>
+//       <FormLabel>{label} </FormLabel>
+//       <ChakraTextarea {...rest} />
+//       <FormHelperText>{description}</FormHelperText>
+//     </FormControl>
+//   );
+// }
 
-function Button(props) {
-  return <ChakraButton mt={4} type="submit" colorScheme="orange" {...props} />;
-}
+// function Button(props) {
+//   return <ChakraButton mt={4} type="submit" colorScheme="orange" {...props} />;
+// }
 
-const myComponents = {
-  ...defaultComponents,
-  TextInput,
-  TextArea,
-  Button,
-};
+// const myComponents = {
+//   ...defaultComponents,
+//   TextInput,
+//   TextArea,
+//   Button,
+// };
 
-const Contact = ({ data }) => {
+// const Contact = ({ data }) => {
+const Contact = () => {
   return (
     <Layout>
       <FormControl id="email" isRequired>
@@ -70,19 +67,19 @@ const Contact = ({ data }) => {
   );
 };
 
-export const query = graphql`
-  {
-    formiumForm(slug: { eq: "gatsby-challenge" }) {
-      id
-      createAt
-      name
-      projectId
-      schema
-      slug
-      updateAt
-      version
-    }
-  }
-`;
+// export const query = graphql`
+//   {
+//     formiumForm(slug: { eq: "gatsby-challenge" }) {
+//       id
+//       createAt
+//       name
+//       projectId
+//       schema
+//       slug
+//       updateAt
+//       version
+//     }
+//   }
+// `;
 
 export default Contact;
