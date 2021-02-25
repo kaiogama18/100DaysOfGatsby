@@ -6,11 +6,10 @@ import {
   Input,
   Textarea as ChakraTextarea
 } from "@chakra-ui/react";
-import { defaultComponents, FormiumForm } from "@formium/react";
+import { defaultComponents } from "@formium/react";
 import { graphql } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
-import { formium } from "../lib/formium";
 
 function TextInput(props) {
   const { id, label, description, ...rest } = props;
@@ -48,14 +47,25 @@ const myComponents = {
 const Contact = ({ data }) => {
   return (
     <Layout>
-      <FormiumForm
+      <FormControl id="email" isRequired>
+        <FormLabel>Email address</FormLabel>
+        <Input type="email" />
+        <FormHelperText>We'll never share your email.</FormHelperText>
+      </FormControl>
+      <FormControl id="email" mt={5}>
+        <FormLabel>Email address</FormLabel>
+        <Input type="email" />
+        <FormHelperText>We'll never share your email.</FormHelperText>
+      </FormControl>
+
+      {/* <FormiumForm
         data={data.formiumForm}
         components={myComponents}
         onSubmit={async (values) => {
           await formium.submitForm("gatsby-challenge", values);
           alert("Sucess");
         }}
-      />
+      /> */}
     </Layout>
   );
 };

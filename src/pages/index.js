@@ -25,7 +25,7 @@ export default function Home({ data }) {
     <>
       <SEO />
       <Layout>
-          <UnorderedList>
+          <UnorderedList >
             {
               data.allContentfulCity.edges.map(({ node: city }) => (
                 <ListItem key={city.name}>
