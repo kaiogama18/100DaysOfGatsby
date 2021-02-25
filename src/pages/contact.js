@@ -1,16 +1,16 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { formium } from "../lib/formium";
-import Layout from "../components/layout";
-import { defaultComponents, FormiumForm } from "@formium/react";
 import {
   Button as ChakraButton,
   FormControl,
   FormHelperText,
   FormLabel,
   Input,
-  Textarea as ChakraTextarea,
+  Textarea as ChakraTextarea
 } from "@chakra-ui/react";
+import { defaultComponents, FormiumForm } from "@formium/react";
+import { graphql } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import { formium } from "../lib/formium";
 
 function TextInput(props) {
   const { id, label, description, ...rest } = props;

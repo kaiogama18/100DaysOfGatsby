@@ -1,7 +1,7 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
 import { Badge, ListItem, UnorderedList } from '@chakra-ui/react'
+import { graphql, Link } from 'gatsby'
+import React from 'react'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 export const query = graphql`
   query MyQuery {
@@ -25,7 +25,6 @@ export default function Home({ data }) {
     <>
       <SEO />
       <Layout>
-
           <UnorderedList>
             {
               data.allContentfulCity.edges.map(({ node: city }) => (
