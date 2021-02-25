@@ -2,5 +2,5 @@ node_modules/
 .cache/
 public
 
-# dotenv environment variables file
-.env
+# # dotenv environment variables file
+# .env
