@@ -1,41 +1,30 @@
-import { Badge, ListItem, UnorderedList } from '@chakra-ui/react'
-import { graphql, Link } from 'gatsby'
-import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-export const query = graphql`
-  query MyQuery {
-    allContentfulCity {
-      edges {
-        node {
-          name
-          description
-          location {
-            lat
-            lon
-          }
-          gatsbyPath(filePath: "/city/{contentfulCity.name}")
-        }
-      }
-    }
-  }
-`
-export default function Home({ data }) {
+import { Box, Heading } from "@chakra-ui/layout";
+import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
+import Layout from "../components/layout";
+
+export default function Home() {
   return (
     <>
-      <SEO />
       <Layout>
-          <UnorderedList >
-            {
-              data.allContentfulCity.edges.map(({ node: city }) => (
-                <ListItem key={city.name}>
-                  <Link to={city.gatsbyPath}> <Badge>{city.name}</Badge> - </Link>
-                  {city.description} - {city.location.lat} - {city.location.lon}
-                </ListItem>
-              ))
-            }
-          </UnorderedList>
+        <Box borderRadius="lg" overflow="hidden" w="3xl">
+          <StaticImage
+            quality={100}
+            layout="fullWidth"
+            placeholder="blurred"
+            formats={["auto", "webp"]}
+            src="../images/headphone.jpeg"
+            alt="headphone banner background red"
+          />
+        </Box>
+
+        <Box p="6">
+          <Heading size="lg">
+            High-quality stereo speakers to notebooks and desktops. They
+            guarantee clean and natural sound.
+          </Heading>
+        </Box>
       </Layout>
     </>
-  )
+  );
 }

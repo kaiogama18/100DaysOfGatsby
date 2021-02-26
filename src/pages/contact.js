@@ -45,11 +45,10 @@ const Contact = () => {
   return (
     <Layout>
       <FormControl id="email" isRequired>
-        <FormLabel>Email address</FormLabel>
-        <Input type="email" />
-        <FormHelperText>We'll never share your email.</FormHelperText>
+        <FormLabel>Name</FormLabel>
+        <Input type="username" />
       </FormControl>
-      <FormControl id="email" mt={5}>
+      <FormControl id="email" mt={5} isRequired>
         <FormLabel>Email address</FormLabel>
         <Input type="email" />
         <FormHelperText>We'll never share your email.</FormHelperText>
