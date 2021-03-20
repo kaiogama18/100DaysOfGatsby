@@ -29,9 +29,15 @@
 
 ## 🚀 Challenge 2: Proof of Concept
 
+## 🚀 Challenge 4: Shopify Store
 
-    -The store should live under a new “/shop” route on the site
-    -Sign up for a Shopify Developer account to receive a free API key
-    -Use the new BETA source integration plugin for Shopify that Gatsby launched at their conference, gatsby-source-shopify-experimental
-    -Follow the step-by-step instructions in that plugin’s README.
-    - Create a landing page, and pages for two products – a shirt and a hat
+   - The store should live under a new “/shop” route on the site
+   
+   - Sign up for a Shopify Developer account to receive a free API key
+   
+   - Use the new BETA source integration plugin for Shopify that Gatsby launched at their conference, gatsby-source-shopify-experimental
+   
+   - Follow the step-by-step instructions in that plugin’s README.
+   
+   - Create a landing page, and pages for two products – a shirt and a hat
+   
