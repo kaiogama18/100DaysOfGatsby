@@ -29,6 +29,8 @@
 
 ## 🚀 Challenge 2: Proof of Concept
 
+## 🚀 Challenge 3: Proof of Concept
+
 ## 🚀 Challenge 4: Shopify Store
 
    - The store should live under a new “/shop” route on the site
