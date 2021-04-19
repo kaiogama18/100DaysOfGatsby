@@ -27,9 +27,9 @@
   
   - Contentful Api
 
-## 🚀 Challenge 2: Proof of Concept
+## 🚀 Challenge 2: Proof of Concept 2020
 
-## 🚀 Challenge 3: Proof of Concept
+## 🚀 Challenge 3: 2020
 
 ## 🚀 Challenge 4: Shopify Store
 
