@@ -7,7 +7,7 @@
   #100DaysOfGatsby
 </h1>
 
-## 🚀 Challenge 1: Proof of Concept
+## 🚀 Challenge 1: Proof of the Concept
 
 1.  **Build a proof of concept (POC) Gatsby site to test their routing API, builds service, hosting, and Contentful integration.**
 
